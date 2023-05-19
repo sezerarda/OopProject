@@ -1,0 +1,54 @@
+﻿@model EntityLayer.Concrete.Team
+@{
+    ViewData["Title"] = "AddTeam";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Yeni Takım Arkadaşı</h4>
+            <form class="forms-sample" method="post">
+                <div class="form-group">
+                    <label for="exampleInputName1">İsim</label>
+                    <span asp-validation-for="PersonName" class="text-danger"></span>
+                    @Html.TextBoxFor(p => p.PersonName , new { @class = "form-control" } )
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail3">Title</label>
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                    @Html.TextBoxFor(p => p.Title, new { @class = "form-control" })
+
+                </div>
+                 <div class="form-group">
+                    <label for="exampleTextarea1">Image</label>
+                    @Html.TextBoxFor(p => p.Image, new { @class = "form-control" })
+
+                </div>
+                <div class="form-group">
+                    <label for="exampleTextarea1">Twitter</label>
+                    @Html.TextBoxFor(p => p.TwitterUrl, new { @class = "form-control" })
+
+                </div>
+                <div class="form-group">
+                    <label for="exampleTextarea1">FacebookUrl</label>
+                    @Html.TextBoxFor(p => p.FacebookUrl, new { @class = "form-control" })
+
+                </div>
+                <div class="form-group">
+                    <label for="exampleTextarea1">WebSiteUrl</label>
+                    @Html.TextBoxFor(p => p.WebSiteUrl, new { @class = "form-control" })
+
+                </div>
+               
+                <div class="form-group">
+                    <label for="exampleTextarea1">InstagramUrl</label>
+                    @Html.TextBoxFor(p => p.InstagramUrl, new { @class = "form-control" })
+
+                </div>
+                <button type="submit" class="btn btn-primary me-2">Kaydet</button>
+            </form>
+        </div>
+    </div>
+</div>
+
